@@ -34,7 +34,7 @@ async def users_put(user_in:UserOut):
     user = get_user(user_in.username)
     if user != None:
          raise HTTPException(status_code=404,
-    detail="El usuario ya existe")
+    detail=False)
     update_user(user_in)     
     raise HTTPException(status_code=200,
     detail=True)  
