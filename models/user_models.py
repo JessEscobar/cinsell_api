@@ -8,6 +8,7 @@ class UserIn(BaseModel):
 
 class UserOut(BaseModel):
     username: str
+    password: str
     nDocumento:int
     nombre:str
     telefono:int
